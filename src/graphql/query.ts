@@ -1,10 +1,10 @@
 import { userQueries } from "./resources/user/user.schema";
 import { postQueries } from "./resources/post/post.schema";
-import { commentMutations } from "./resources/comment/comment.schema";
+import { commentQueries } from "./resources/comment/comment.schema";
 
 const Query = `
     type Query{
-        ${commentMutations}
+        ${commentQueries}
         ${postQueries}
         ${userQueries}        
     }
