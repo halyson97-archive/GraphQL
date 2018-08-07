@@ -15,11 +15,11 @@ export interface PostAttributes{
 
 export interface PostInstance extends Sequelize.Instance<PostAttributes>, PostAttributes{}
 
-export interface PostModel extends BaseModelInterface, Sequelize.Model<PostAttributes, PostAttributes>{}
+export interface PostModel extends BaseModelInterface, Sequelize.Model<PostInstance, PostAttributes>{}
 
 export default (sequelize: Sequelize.Sequelize, DataTypes: Sequelize.DataTypes): PostModel =>{
     const Post: PostModel = 
-        sequelize.define('User', {
+        sequelize.define('Post', {
             id: {
                 type: DataTypes.INTEGER,
                 allowNull: false,
